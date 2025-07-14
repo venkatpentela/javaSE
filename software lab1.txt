@@ -1,0 +1,42 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the coefficent of 'a':  ");
+        double a = sc.nextDouble();
+        System.out.println("Enter the coefficent of 'b':  ");
+        double b = sc.nextDouble();
+        System.out.println("Enter the coefficent of 'c':  ");
+        double c = sc.nextDouble();
+        
+        double d = b*b - 4*a*c;
+        if (d > 0){
+            double e = (-b + Math.sqrt(d))/(2*a);
+            double f = (-b - Math.sqrt(d))/(2*a);
+            System.out.println("roots are real and distint");
+            System.out.println("e =" +e);
+            System.out.println("f ="+f);
+
+
+        }
+        else if(d == 0){
+            double root = -b/2*a;
+            System.out.println("root"+root);
+            System.out.println("root are equal");
+            
+        }
+        else {
+            double rp = -b/2*a;
+            double img = Math.sqrt(-d)/(2*a);
+            System.out.println("roots are complex and distint");
+            System.out.println("e ="+rp+"+"+img+"i");
+            System.out.println("f ="+rp+"+"+img+"i");
+
+        }
+        
+
+        
+    }
+}
